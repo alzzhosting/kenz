@@ -1,2 +1,2 @@
-export const API_KEY = ['memek'];
-export const CREATOR = 'ErerexIDChx';
+export const API_KEY = ['kenz2025'];
+export const CREATOR = 'KenzShop';
