@@ -2,8 +2,8 @@ import { CREATOR } from "../../../settings";
 import axios from 'axios';
 
 const API_KEY = ['Xavelyn'];
-const GITHUB_TOKEN = "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"; 
-const GITHUB_API_URL = "https://api.github.com/repos/NyxObscura/velyn/contents/velyn.json?ref=main"; 
+const GITHUB_TOKEN = "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"; 
+const GITHUB_API_URL = "https://api.github.com/repos/alzzhosting/kenz/contents/kenz.json?ref=main"; 
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
