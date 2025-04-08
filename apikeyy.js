@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const GITHUB_API = 'https://api.github.com/repos/alzzhosting/kenz/contents/kenz.json?ref=main'';
 const TOKEN = "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";
-const OWNER_KEY = "Xavelyn";
+const OWNER_KEY = "kenz";
 
 let apiKeys = [];
 
