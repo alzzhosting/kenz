@@ -13,9 +13,9 @@ const AboutPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h2 className={styles.subtitle}>About VelynApi</h2>
+        <h2 className={styles.subtitle}>About KenzApi</h2>
         <p className={styles.desc}>
-         Rest Api Velyn adalah solusi terbaik untuk anda yang mencari api versi gratisan,
+         Rest Api Kenz adalah solusi terbaik untuk anda yang mencari api versi gratisan,
          dan gunakan lah api velyn karena endpoint api yang disediakan itu sangatlah cepat dalam proses pengambilan data sesuai requestan anda yang dibutuhkan
          dan juga tentunya tidak memakai limit ataupun key.
          disini menyediakan khusus pengguna gratisan
