@@ -2,20 +2,20 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 
-const GITHUB_API = 'https://api.github.com/repos/alzzhosting/kenz/contents/kenz.json?ref=main'';
+const GITHUB_API = 'https://api.github.com/repos/alzzhosting/kenz/contents/apikey.json?ref=main'';
 const TOKEN = "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";
 const OWNER_KEY = "kenz";
 
 let apiKeys = [];
 
 try {
-    const apiKeyData = fs.readFileSync(path.join(process.cwd(), "kenz.json"), "utf8");
+    const apiKeyData = fs.readFileSync(path.join(process.cwd(), "apikey.json"), "utf8");
     const parsedData = JSON.parse(apiKeyData);
     apiKeys = parsedData.api_keys && Array.isArray(parsedData.api_keys) ? parsedData.api_keys : [];
 
     console.log("API keys berhasil dimuat:", apiKeys);
 } catch (error) {
-    console.error("Gagal membaca file velyn.json:", error);
+    console.error("Gagal membaca file apikey.json:", error);
     process.exit(1);
 }
 
