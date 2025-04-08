@@ -13,7 +13,38 @@
     "version": "1.0"
   },
   "paths": {
-    
+
+    "/api/orkut/createpayment": {
+      "get": {
+        "tags": ["Orkut"], 
+        "description": "Create QRIS Orkut", 
+        "parameters": [
+          {
+            "name": "UrlQris", 
+            "in": "UrlQris", 
+            "schema": {
+              "type": "string"
+            }
+          }
+        ], 
+        "response": {
+          "200": {
+            "description": "Success", 
+            "content": {
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }, 
+          "401": {
+            "description": "Mungkin Ada yang salah"
+          }
+        }
+      }
+    },
     "/api/stalk/repostalk": {
       "get": {
         "tags": ["Stalker"],
