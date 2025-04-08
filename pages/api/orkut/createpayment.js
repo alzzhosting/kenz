@@ -21,7 +21,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        const apiUrl = `https://api.kenz.my.id/api/v2/create/createpayment?UrlQris=${encodeURIComponent(UrlQris)}&amount=${encodeURIComponent(amount)}`;
+        const apiUrl = `https://api.kenz.my.id/api/v2/payment/createpayment?UrlQris=${encodeURIComponent(UrlQris)}&amount=${encodeURIComponent(amount)}`;
         const response = await axios.get(apiUrl, { responseType: "arraybuffer" });
 
         if (!response.data || response.status !== 200) {
