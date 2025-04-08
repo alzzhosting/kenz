@@ -15,36 +15,69 @@
   "paths": {
 
     "/api/orkut/createpayment": {
-      "get": {
-        "tags": ["Orkut"], 
-        "description": "Create QRIS Orkut", 
-        "parameters": [
-          {
-            "name": "UrlQris", 
-            "in": "UrlQris", 
+  "get": {
+    "tags": ["Orkut"],
+    "security": [
+      {
+        "ApiKeyAuth": []
+      }
+    ],
+    "parameters": [
+      {
+        "name": "UrlQris",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "URL QRIS tujuan yang ingin dibuat"
+      },
+      {
+        "name": "amount",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Nominal pembayaran dalam angka"
+      },
+      {
+        "name": "apikey",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "API key yang diperlukan untuk akses"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Berhasil menghasilkan gambar QRIS",
+        "content": {
+          "image/png": {
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "binary"
             }
-          }
-        ], 
-        "response": {
-          "200": {
-            "description": "Success", 
-            "content": {
-              "image/png": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
-          }, 
-          "401": {
-            "description": "Mungkin Ada yang salah"
           }
         }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'UrlQris' atau 'amount' wajib diisi"
+      },
+      "401": {
+        "description": "Unauthorized - API Key tidak valid atau tidak diberikan"
+      },
+      "403": {
+        "description": "Forbidden - API Key tidak memiliki akses"
+      },
+      "500": {
+        "description": "Internal Server Error"
       }
-    },
+    }
+  }
+}, 
     "/api/stalk/repostalk": {
       "get": {
         "tags": ["Stalker"],
