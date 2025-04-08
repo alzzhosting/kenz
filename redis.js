@@ -2,7 +2,7 @@ import Redis from "ioredis";
 
 // Koneksi ke Redis Upstash
 const redis = new Redis({
-    host: "vital-katydid-25635.upstash.io",
+    host: "relevant-caiman-61237.upstash.io",
     port: 6379,
     password: "AWQjAAIjcDE5YzAyZjMyNGY5ZDc0ZjM5YmZhOTlmNjc5NjkzMGVhNXAxMA",
     tls: {}
