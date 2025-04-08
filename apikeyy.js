@@ -2,14 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 
-const GITHUB_API = 'https://api.github.com/repos/NyxObscura/velyn/contents/velyn.json?ref=main';
-const TOKEN = "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";
+const GITHUB_API = 'https://api.github.com/repos/alzzhosting/kenz/contents/kenz.json?ref=main'';
+const TOKEN = "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";
 const OWNER_KEY = "Xavelyn";
 
 let apiKeys = [];
 
 try {
-    const apiKeyData = fs.readFileSync(path.join(process.cwd(), "velyn.json"), "utf8");
+    const apiKeyData = fs.readFileSync(path.join(process.cwd(), "kenz.json"), "utf8");
     const parsedData = JSON.parse(apiKeyData);
     apiKeys = parsedData.api_keys && Array.isArray(parsedData.api_keys) ? parsedData.api_keys : [];
 
