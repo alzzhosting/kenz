@@ -4,7 +4,7 @@ import Redis from "ioredis";
 const redis = new Redis({
     host: "relevant-caiman-61237.upstash.io",
     port: 6379,
-    password: "AWQjAAIjcDE5YzAyZjMyNGY5ZDc0ZjM5YmZhOTlmNjc5NjkzMGVhNXAxMA",
+    password: "Ae81AAIjcDE2YzQ3NWZkYmM4MjY0NzMyODM1MThiNDA4MTZmNWQ2MXAxMA",
     tls: {}
 });
 
