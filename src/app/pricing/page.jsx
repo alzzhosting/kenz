@@ -9,7 +9,7 @@ const PricingPage = () => {
 
   const handleButtonClick = (plan) => {
     if (plan === "Free Plan" || plan === "Pro Plan" || plan === "Premium Plan") {
-      const whatsappNumber = "62895342022385"; 
+      const whatsappNumber = "6288215523477"; 
       const message = encodeURIComponent(`Halo permisi, saya ingin berlangganan ${plan}. Mohon informasi lebih lanjut.`);
       window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
     }
