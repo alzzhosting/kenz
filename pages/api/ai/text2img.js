@@ -12,7 +12,23 @@ export default async function handler(req, res) {
         });
     }
 
-    const { prompt } = req.query;
+    const { prompt, apikey } = req.query;
+
+    if (!apikey) {
+        return res.status(400).json({
+            status: false,
+            creator: CREATOR,
+            error: "Parameter 'apikey' wajib diisi",
+        });
+    }
+
+    if (apikey !== API_KEY) {
+        return res.status(403).json({
+            status: false,
+            creator: CREATOR,
+            error: "API key tidak valid",
+        });
+    }
 
     if (!prompt) {
         return res.status(400).json({
